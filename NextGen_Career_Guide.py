@@ -17,7 +17,7 @@ def job_search_section(job_query=None):
             st.warning("Please enter a keyword to search.")
             return
         try:
-            url = "https://www.sarkariresult.com/"
+            url = "https://www.sarkariexam.com/"
             r = requests.get(url)
             soup = BeautifulSoup(r.text, 'html.parser')
             links = soup.find_all('a', href=True)
@@ -914,3 +914,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
